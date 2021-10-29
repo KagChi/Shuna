@@ -6,10 +6,7 @@ import { socketManager } from "../ws/socketManager";
 export class restManager {
     private readonly apiBaseURL = "https://api.revolt.chat/";
     private readonly ws = new socketManager(this);
-    constructor(public client: Client) { 
-        if(!this.client.sessionToken) throw new Error("There are no sessionToken in client property")
-        this.ws.connect();
-    }
+    constructor(public client: Client) { }
     
     public request(method: HttpMethod, path: string, options: object) {
         return fetch(this.apiBaseURL + path, {
@@ -19,5 +16,10 @@ export class restManager {
             },
             body: JSON.stringify(options)
         })
+    }
+
+    public connectWebsocket() {
+        if(!this.client.sessionToken) throw new Error("There are no sessionToken in client property")
+        this.ws.connect();
     }
 }
