@@ -1,0 +1,35 @@
+{
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.3.1"
+  },
+  "name": "shuna",
+  "description": "> A revolt chat api wrapper for NodeJS",
+  "version": "0.1.0",
+  "main": "dist",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KagChi/Shuna.git"
+  },
+  "keywords": [
+    "Revolt",
+    "chat",
+    "revolt",
+    "app",
+    "revolt.js"
+  ],
+  "author": "KagChi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KagChi/Shuna/issues"
+  },
+  "homepage": "https://github.com/KagChi/Shuna#readme",
+  "dependencies": {
+    "undici": "^4.9.1",
+    "ws": "^8.2.3"
+  }
+}
